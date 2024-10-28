@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@2.0.7/lib/marked.min.js"></script>
+</head>
+<body>
+    <!-- <div x-data x-init="$el.innerHTML = marked($el.innerText)">
+        This is **markdown**
+    </div> -->
+
+    <!-- <div x-data x-on:click="window.navigator.clipboard.writeText($el.innerText)">
+        123456789
+    </div> -->
+
+    <input type="text" value="abcdef" x-data x-on:click="window.navigator.clipboard.writeText($el.value); $el.select()">
+</body>
+</html>

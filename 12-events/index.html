@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    <!-- <form x-data x-on:submit.prevent="console.log('submitted')">
+        <textarea
+            cols="30"
+            rows="10"
+            x-data="{ shiftHeld: false }"
+            x-on:keydown.shift="shiftHeld = true"
+            x-on:keyup.shift="shiftHeld = false"
+            x-on:keyup.enter="if (!shiftHeld) { $el.closest('form').dispatchEvent(new Event('submit')) }"
+        ></textarea>
+    </form> -->
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+        }
+    </style>
+
+    <div x-data="{ open: false }">
+        <button x-on:click="open = true">Open menu</button>
+        <div x-show="open" class="box" x-on:click.outside="open = false">
+            Menu content
+        </div>
+    </div>
+</body>
+</html>

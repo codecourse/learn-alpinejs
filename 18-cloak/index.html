@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div x-data="{ show: false }">
+        <div x-show="show" x-cloak>
+            This is the content
+        </div>
+
+        <button x-on:click="show = true">Show me</button>
+    </div>
+</body>
+</html>
